@@ -1,0 +1,1 @@
+Hermes → nnbot-chat connection test
