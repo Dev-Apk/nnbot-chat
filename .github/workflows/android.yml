@@ -41,8 +41,7 @@ jobs:
         run: |
           export ANDROID_HOME=$HOME/Android
           export PATH=$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$PATH
-          chmod +x gradlew
-          ./gradlew assembleDebug --no-daemon
+          gradle assembleDebug --no-daemon
       
       - uses: actions/upload-artifact@v4
         with:
