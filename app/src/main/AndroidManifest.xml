@@ -6,8 +6,7 @@
         android:allowBackup="true"
         android:label="AI Assistant"
         android:theme="@style/Theme.App"
-        android:supportsRtl="true"
-        android:networkSecurityConfig="@xml/network_security_config">
+        android:supportsRtl="true">
         <activity
             android:name=".MainActivity"
             android:exported="true"
