@@ -26,19 +26,15 @@ android {
         targetCompatibility JavaVersion.VERSION_17
     }
     packagingOptions {
-        exclude 'META-INF/DEPENDENCIES'
-        exclude 'META-INF/LICENSE'
-        exclude 'META-INF/LICENSE.txt'
-        exclude 'META-INF/NOTICE'
-        exclude 'META-INF/NOTICE.txt'
-        exclude 'META-INF/AL2.0'
-        exclude 'META-INF/LGPL2.1'
+        resources {
+            excludes += ['META-INF/DEPENDENCIES', 'META-INF/LICENSE', 'META-INF/LICENSE.txt',
+                         'META-INF/NOTICE', 'META-INF/NOTICE.txt', 'META-INF/AL2.0', 'META-INF/LGPL2.1']
+        }
     }
 }
 
 configurations.all {
     resolutionStrategy {
-        // Force consistent kotlin stdlib version
         force 'org.jetbrains.kotlin:kotlin-stdlib:1.9.24'
         force 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.24'
         force 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.24'
@@ -48,5 +44,4 @@ configurations.all {
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation 'androidx.webkit:webkit:1.12.1'
-    implementation 'com.google.android.material:material:1.12.0'
 }
